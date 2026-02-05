@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fan Siêu Nhân Hồng</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    /* Tổng thể trang */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url('background.jpg') center/cover no-repeat fixed;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Lớp phủ đen mờ để text nổi bật */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 0;
+    }
+
+    /* Vùng nội dung */
+    .content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 20px 0 60px;
+    }
+
+    /* Tiêu đề */
+    .title-container {
+      margin-bottom: 25px;
+      padding: 0 10px;
+    }
+
+    .main-text {
+      font-size: 48px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: 3px 3px 12px rgba(255, 0, 128, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .main-text img {
+      height: 50px;
+      width: 50px;
+      object-fit: contain;
+    }
+
+    .sub-text {
+      font-size: 18px;
+      color: #f8f8f8;
+      margin-top: 6px;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+    }
+
+    /* Khối video */
+    .video-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      width: 85%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-wrapper {
+      border: 3px solid #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Hover chỉ cho PC */
+    @media (hover:hover) {
+      .video-wrapper:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 16px rgba(255, 105, 180, 0.9);
+      }
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #ccc;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+
+    /* 📱 Mobile Responsive */
+    @media (max-width: 1024px) {
+      .video-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        width: 90%;
+      }
+
+      .main-text {
+        font-size: 38px;
+      }
+
+      .main-text img {
+        height: 40px;
+        width: 40px;
+      }
+
+      .sub-text {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .main-text {
+        font-size: 32px;
+      }
+
+      .main-text img {
+        height: 32px;
+        width: 32px;
+      }
+
+      .video-container {
+        grid-template-columns: 1fr;
+        width: 92%;
+        gap: 15px;
+      }
+
+      .sub-text {
+        font-size: 15px;
+      }
+
+      .content {
+        padding-bottom: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <!-- Tiêu đề -->
+    <div class="title-container">
+      <div class="main-text">
+        <img src="logo.png" alt="Logo Siêu Nhân Hồng">
+        FAN SIÊU NHÂN HỒNG
+      </div>
+      <div class="sub-text">Cùng Siêu Nhân Hồng đi giải cứu thế giới</div>
+    </div>
+
+    <!-- Video -->
+    <div class="video-container">
+      <div class="video-wrapper">
+        <video controls>
+          <source src="videos/video1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-wrapper">
+        <video controls>
+          <source src="videos/video2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-wrapper">
+        <video controls>
+          <source src="videos/video3.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-wrapper">
+        <video controls>
+          <source src="videos/video4.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-wrapper">
+        <video controls>
+          <source src="videos/video5.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <footer>© 2025 Siêu Nhân Hồng Team - All rights reserved</footer>
+  </div>
+
+</body>
+</html>
